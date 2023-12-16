@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+
+</head>
+<body>
+    <div id="main-container">
+        <div id="join-create-container">
+            <button id="create-btn">Create Room</button>
+            <input type="text" id="room-input" placeholder="Enter Room Code">
+            <button id="join-btn">Join Room</button>
+        </div>
+        <div id="game-container" class="hidden">
+            <div id="status-message"></div>
+            <div id="chat-container"></div>
+        </div>
+        <div id="winner-message"></div>
+        <div id="loser-message"></div>
+
+        <!-- Add this to your HTML where you want to display the chat box -->
+        <div id="chat-box" class="hidden">
+            <ul id="chat-messages"></ul>
+            <input type="text" id="message-input" placeholder="Type your message..." />
+            <button id="send-btn">Send</button>
+        </div>
+
+        <!-- Voice chat controls and audio elements -->
+        <div id="voice-control" class="hidden">
+        <h1>Basic Voice Chat</h1>
+        <div id="call-controls">
+            <button id="call-button">Start Call</button>
+            <button id="end-call-button">End Call</button>
+        </div>
+    </div>
+        <audio id="local-audio"></audio>
+        <audio id="remote-audio"></audio>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="voice-chat-client.js"></script>
+    <script src="game-client.js"></script>
+</body>
+</html>
